@@ -26,6 +26,40 @@
         *zoom: 1;
         margin: 0 1px;
     }
+	.containerbox {
+        overflow: hidden;
+        *zoom: 1;
+        margin: 0 10px;
+    }
+	#button-container1 {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    #button-container1 button {
+        flex: 1 0 auto;
+        height: 40px;
+        padding: 0 20px;
+        margin: 5px;
+        font-size: 16px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: box-shadow 0.3s, background-color 0.3s, color 0.3s;
+    }
+
+    #button-container1 button:hover {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    #button-container1 button#vlc-btn,
+    #button-container1 button#pi-btn,
+    #button-container1 button#sp-btn,
+    #button-container1 button#mx-btn {
+        background-color: Lavender; 
+        color: #ffffff; 
+    }
 
 </style>
 
@@ -42,7 +76,26 @@
     <div class="container">
         <tag src="%s" class="player"></tag>
     </div>
-    
+
+<div class="containerbox"> 
+	<div style="margin-bottom: 5px; margin-top: 10px">Stream Options :</div>
+        <div id="button-container1">
+            <button id="vlc-btn" onclick="playOnline()">
+                <img src="https://i.ibb.co/GtnGhBV/videolan-vlc-logo-icon-170258.png" alt="vlc_logo" width="110px" height="40px"/>
+            </button>
+            <button id="mx-btn" onclick="playOnlineMx()"><img src="https://i.ibb.co/djV3Fn8/mxlogo.png" alt="mx_logo" width="120px">
+            </button>
+        </div>
+        <div style="margin-bottom: 5px; margin-top: 5px">
+        <div id="button-container1">
+            <button id="sp-btn" onclick="playOnlinesp()">
+                <img src="https://i.ibb.co/vZxWgz5/ZKTgV9HV.png" alt="splayer_logo" width="130px">
+            </button>
+            <button id="pi-btn" onclick="playOnlinepi()"><img src="https://i.ibb.co/JsDNHgz/c0C4vnAa.png" alt="playit_logo" width="140px">
+            </button>
+        </div>
+	</div>
+</div>
     <footer>
 	<h4><a href="tg://resolve?domain=filetolinkbot" style="color:blue" >Make your own Link &emsp; &emsp;</a></h4>
         <span id="fork-text">Fork me on</span>
