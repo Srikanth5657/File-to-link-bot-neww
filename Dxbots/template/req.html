@@ -84,7 +84,7 @@
     </div>
 
 <div class="containerbox"> 
-	<div style="margin-bottom: 5px; margin-top: 10px">Stream Options :</div>
+	<div style="margin-bottom: 5px; margin-top: 10px">𝐒𝐭𝐫𝐞𝐚𝐦 𝐎𝐩𝐭𝐢𝐨𝐧𝐬 :</div>
         <div id="button-container1">
             <button id="vlc-btn" onclick="playOnline()">
                 <img src="https://i.ibb.co/GtnGhBV/videolan-vlc-logo-icon-170258.png" alt="vlc_logo" width="110px" height="40px"/>
@@ -140,6 +140,107 @@
               'download',
               'fullscreen'
             ];
+	</script>
+	<div>
+		<script>
+    const currentUrl = window.location.href;
+    const finalUrl = currentUrl.replace("/watch/", "/");
+
+    function playOnline() {
+        const finalLinkUrl = finalUrl;
+        const vlcUrl = `vlc://${finalLinkUrl}`;
+        window.location.href = vlcUrl;
+    }
+
+    function playOnlineMx() {
+        const finalLinkUrl = finalUrl;
+        const mxUrl = `intent:${finalLinkUrl}#Intent;package=com.mxtech.videoplayer.ad;S.title={{file_name}};end`;
+        window.location.href = mxUrl;
+    }
+    
+    function playOnlinesp() {
+        const finalLinkUrl = finalUrl;
+        const spUrl = `intent:${finalLinkUrl}#Intent;action=com.young.simple.player.playback_online;package=com.young.simple.player;end`;
+        window.location.href = spUrl;
+    }
+    
+    function playOnlinepi() {
+        const finalLinkUrl = finalUrl;
+        const piUrl = `playit://playerv2/video?url=${finalLinkUrl}&amp;title={{file_name}}`;
+        window.location.href = piUrl;
+    }
+
+    function openTgBot() {
+        const createLinkUrl = "https://telegram.dog/";
+        window.open(createLinkUrl, "_blank");
+    }
+
+    function openModalTG() {
+        const modal = document.getElementById("myModal");
+        modal.style.display = "block";
+
+        const words = [
+            "Received File request...✅",
+            "Processing your request...⌛",
+            "Generating your link...🔗",
+            "Sending link to you...🚀",
+            "Redirecting To Telegram...😉"
+        ];
+
+        let index = 0;
+        const timerElement = document.getElementById("timer");
+        timerElement.innerText = words[index];
+
+        const timer = setInterval(() => {
+            index++;
+            if (index < words.length) {
+                timerElement.innerText = words[index];
+            } else {
+                clearInterval(timer);
+                TGre();
+                modal.style.display = "none";
+            }
+        }, 1000);
+    }
+
+    function TGre() {
+        const tglink = "";
+        window.location.href = tglink;
+    }
+
+    function openModal() {
+        const modal = document.getElementById("myModal");
+        modal.style.display = "block";
+
+        const words = [
+            "Received Download request...✅",
+            "Processing your request...⌛",
+            "Generating your link...🔗",
+            "Sending link to you...🚀",
+            "Download has started...😉"
+        ];
+
+        let index = 0;
+        const timerElement = document.getElementById("timer");
+        timerElement.innerText = words[index];
+
+        const timer = setInterval(() => {
+            index++;
+            if (index < words.length) {
+                timerElement.innerText = words[index];
+            } else {
+                clearInterval(timer);
+                download();
+                modal.style.display = "none";
+            }
+        }, 1000);
+    }
+
+    function download() {
+        const finalLinkUrl = finalUrl;
+        window.location.href = finalLinkUrl;
+    }
+	
         document.addEventListener('DOMContentLoaded', () => {
             const player = Plyr.setup('.player', { controls });
         });
@@ -152,5 +253,6 @@
             footer.classList.toggle('dark')
         }
     </script>
+	</div>
 </body>
 </html>
