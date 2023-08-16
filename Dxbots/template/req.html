@@ -95,7 +95,7 @@ YOUR ADS
 
     function playOnlineMx() {
         const finalLinkUrl = finalUrl;
-        const mxUrl = `intent:${finalLinkUrl}#Intent;package=com.mxtech.videoplayer.ad;S.title={{file_name}};end`;
+        const mxUrl = `intent:${finalLinkUrl}#Intent;package=com.mxtech.videoplayer.ad;S.title={{file-name}};end`;
         window.location.href = mxUrl;
     }
     
@@ -107,7 +107,7 @@ YOUR ADS
     
     function playOnlinepi() {
         const finalLinkUrl = finalUrl;
-        const piUrl = `playit://playerv2/video?url=${finalLinkUrl}&amp;title={{file_name}}`;
+        const piUrl = `playit://playerv2/video?url=${finalLinkUrl}&amp;title={{file-name}}`;
         window.location.href = piUrl;
     }
 
