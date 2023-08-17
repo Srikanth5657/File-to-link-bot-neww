@@ -76,7 +76,7 @@ async def start(b, m):
     await DxStreamBot.send_photo(
         chat_id=m.chat.id,
         photo ="https://telegra.ph/file/d7561b04dd2a99e99d492.jpg",
-        caption =f'<b>Hi {m.from_user.mention(style="md")} !,\nI am Telegram File to Link Generator Bot with Channel support.\n\nSend me any file and get a direct download link and streamable link.!</b>',
+        caption =f'<b>Hi {m.from_user.mention(style="md")} !\nI am Telegram File to Link Generator Bot with Channel support.\n\nSend me any file and get a direct download link and streamable link.!</b>',
         reply_markup=buttonz)
 
 
