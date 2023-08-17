@@ -75,7 +75,7 @@ async def start(b, m):
             return
     await DxStreamBot.send_photo(
         chat_id=m.chat.id,
-        photo ="https://telegra.ph/file/d7561b04dd2a99e99d492.jpg",
+        photo ="https://telegra.ph/file/fc3b3049f688405bc9ada.jpg https://telegra.ph/file/461e96da7dba312a38c9a.jpg https://telegra.ph/file/d7561b04dd2a99e99d492.jpg https://telegra.ph/file/7948af76b46a46e09bd87.jpg",
         caption =f'<b>Hi {m.from_user.mention(style="md")} !,\nI am Telegram File to Link Generator Bot with Channel support.\n\nSend me any file and get a direct download link and streamable link.!</b>',
         reply_markup=buttonz)
 
@@ -102,7 +102,7 @@ async def help_handler(bot, message):
         except UserNotParticipant:
             await DxStreamBot.send_photo(
                 chat_id=message.chat.id,
-                photo="https://telegra.ph/file/461e96da7dba312a38c9a.jpg",
+                photo="https://telegra.ph/file/fc3b3049f688405bc9ada.jpg https://telegra.ph/file/461e96da7dba312a38c9a.jpg https://telegra.ph/file/d7561b04dd2a99e99d492.jpg https://telegra.ph/file/7948af76b46a46e09bd87.jpg",
                 Caption="**𝙹𝙾𝙸𝙽 𝚂𝚄𝙿𝙿𝙾𝚁𝚃 𝙶𝚁𝙾𝚄𝙿 𝚃𝙾 𝚄𝚂𝙴 ᴛʜɪs Bᴏᴛ!**\n\n__Dᴜᴇ ᴛᴏ Oᴠᴇʀʟᴏᴀᴅ, Oɴʟʏ Cʜᴀɴɴᴇʟ Sᴜʙsᴄʀɪʙᴇʀs ᴄᴀɴ ᴜsᴇ ᴛʜᴇ Bᴏᴛ!__",
                 reply_markup=InlineKeyboardMarkup(
                     [
