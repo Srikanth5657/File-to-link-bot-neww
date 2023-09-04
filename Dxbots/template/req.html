@@ -18,6 +18,7 @@
         margin: 0;
         padding: 0;
     }
+
 	#player-container {
         margin: 1px;
     }
@@ -36,10 +37,6 @@
 	overflow: hidden;
         *zoom: 1;
 	margin-bottom: 110px;
-    }
-        .headfile {
-        font-size: 22px;
-	margin-top: 20px;
     }
 	#button-container1 {
         display: flex;
@@ -76,16 +73,13 @@
 </head>
 
 <body>
-    <header>
-        <marquee bgcolor="#808080"
-       <div class="toogle"></div>
-        <div id="file-name">
-            %s
-        </div>
-</marquee>
-    </header>
 	
     <div class="container">
+        <div class="toogle"></div>
+        <div id="file-name">
+           <marquee bgcolor="#808080"
+ direction = "left"> %s</marquee>
+        </div>
         <tag src="%s" class="player"></tag>
     </div>
 
