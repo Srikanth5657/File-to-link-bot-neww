@@ -77,6 +77,34 @@
         background-color: Lavender; 
         color: #ffffff; 
     }
+    #button-container2 button#dl-btn,
+    #button-container2 button#tgfile-btn,
+    #button-container2 button#tg-btn {
+        background-color: #2D76FF; 
+        color: #ffffff; 
+    }
+
+    #button-container2 {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #button-container2 button {
+        height: 40px;
+        padding: 0 20px;
+        margin: 5px;
+        font-size: 16px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: box-shadow 0.3s, background-color 0.3s, color 0.3s;
+    }
+
+    #button-container2 button:hover {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    
 
 </style>
 
@@ -115,6 +143,12 @@
             </button>
         </div>
 	</div>
+	<div style="margin-bottom: 5px; margin-top: 10px"></div>
+        <div id="button-container2">
+            <button id="dl-btn" onclick="download()">
+                <i class="fas fa-download"></i> Download Now
+            </button>
+        </div>
 </div>
 	<div class="mainupdates">
 <center> 
@@ -180,6 +214,11 @@
         const finalLinkUrl = finalUrl;
         const piUrl = `playit://playerv2/video?url=${finalLinkUrl}&amp;title={{file_name}}`;
         window.location.href = piUrl;
+    }
+			
+    function download() {
+        const finalLinkUrl = finalUrl;
+        window.location.href = finalLinkUrl;
     }
 
     function openTgBot() {
