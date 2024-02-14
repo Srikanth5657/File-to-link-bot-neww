@@ -8,7 +8,7 @@
     <title>%s</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Delius">
-    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.12/plyr.css"/>
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.12/plyr.css">
 
 <style>
       marquee{
@@ -16,7 +16,7 @@
       color: Black;
       font-family: serif;
       }
-    </style>
+</style>
 
 <style>
     body {
@@ -25,86 +25,28 @@
         margin: 0;
         padding: 0;
     }
-	#player-container {
+    #player-container {
         margin: 1px;
     }
-	.container {
+    .container {
         overflow: hidden;
         *zoom: 1;
         margin: 0 1px;
-	margin-bottom: 20px;
+        margin-bottom: 20px;
     }
-	.set-container {
-	padding: 15px;
+    .set-container {
+        padding: 15px;
     }
-	.containerbox {
+    .containerbox {
         overflow: hidden;
         *zoom: 1;
-	margin-bottom: 70px;
+        margin-bottom: 70px;
     }
-	.mainupdates {
-	overflow: hidden;
+    .mainupdates {
+        overflow: hidden;
         *zoom: 1;
-	margin-bottom: 110px;
+        margin-bottom: 110px;
     }
-	#button-container1 {
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-    }
-
-    #button-container1 button {
-        flex: 1 0 auto;
-        height: 40px;
-        padding: 0 20px;
-        margin: 5px;
-        font-size: 16px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        transition: box-shadow 0.3s, background-color 0.3s, color 0.3s;
-    }
-
-    #button-container1 button:hover {
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    }
-
-    #button-container1 button#vlc-btn,
-    #button-container1 button#pi-btn,
-    #button-container1 button#sp-btn,
-    #button-container1 button#mx-btn {
-        background-color: Lavender; 
-        color: #ffffff; 
-    }
-    #button-container2 button#dl-btn,
-    #button-container2 button#tgfile-btn,
-    #button-container2 button#tg-btn {
-        background-color: #2D76FF; 
-        color: #ffffff; 
-    }
-
-    #button-container2 {
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    #button-container2 button {
-        height: 40px;
-        padding: 0 20px;
-        margin: 5px;
-        font-size: 16px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        transition: box-shadow 0.3s, background-color 0.3s, color 0.3s;
-    }
-
-    #button-container2 button:hover {
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    }
-    
-
 </style>
 
 </head>
@@ -113,19 +55,20 @@
     
 <div class="set-container">
     <div class="container">
-    <header>
-        <marquee bgcolor="#808080"
-<div class="toogle"></div>
-        <div id="file-name">
-            %s
-        </div>
-</marquee>
-    </header>
-        <tag src="%s" class="player"></tag>
+        <header>
+            <marquee bgcolor="#808080">
+                <div class="toogle"></div>
+                <div id="file-name">%s</div>
+            </marquee>
+        </header>
+        <video id="player" playsinline controls>
+            <source src="%s" type="video/mp4" />
+            <!-- Include audio track sources here -->
+        </video>
     </div>
 
-<div class="containerbox"> 
-	<div style="margin-bottom: 5px; margin-top: 10px">𝐒𝐭𝐫𝐞𝐚𝐦 𝐎𝐩𝐭𝐢𝐨𝐧𝐬 :</div>
+    <div class="containerbox"> 
+        <div style="margin-bottom: 5px; margin-top: 10px">𝐒𝐭𝐫𝐞𝐚𝐦 𝐎𝐩𝐭𝐢𝐨𝐧𝐬 :</div>
         <div id="button-container1">
             <button id="vlc-btn" onclick="playOnline()">
                 <img src="https://i.ibb.co/GtnGhBV/videolan-vlc-logo-icon-170258.png" alt="vlc_logo" width="110px" height="40px"/>
@@ -141,22 +84,22 @@
             <button id="pi-btn" onclick="playOnlinepi()"><img src="https://i.ibb.co/JsDNHgz/c0C4vnAa.png" alt="playit_logo" width="140px">
             </button>
         </div>
-	</div>
-	<div style="margin-bottom: 5px; margin-top: 10px"></div>
+    </div>
+    <div style="margin-bottom: 5px; margin-top: 10px"></div>
         <div id="button-container2">
             <button id="dl-btn" onclick="download()">
                 <i class="fas fa-download"></i> Download Now
             </button>
         </div>
-</div>
-	<div class="mainupdates">
-<center> 
-<div style="margin-bottom: 5px; margin-top: 10px">𝐉𝐨𝐢𝐧 𝐎𝐮𝐫 𝐌𝐚𝐢𝐧 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐅𝐨𝐫 𝐌𝐨𝐫𝐞 𝐮𝐩𝐝𝐚𝐭𝐞𝐬 ❤️ :</div>
-<h3><b>   
-    <a href="https://telegram.dog/CinemasMawa"> <img src="https://img.shields.io/badge/Updates- Channel -blueviolet?style=for-the-badge" alt="Channel"> </a> 
-</b></h3></center>
-	</div>
     </div>
+    <div class="mainupdates">
+        <center> 
+        <div style="margin-bottom: 5px; margin-top: 10px">𝐉𝐨𝐢𝐧 𝐎𝐮𝐫 𝐌𝐚𝐢𝐧 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐅𝐨𝐫 𝐌𝐨𝐫𝐞 𝐮𝐩𝐝𝐚𝐭𝐞𝐬 ❤️ :</div>
+        <h3><b>   
+            <a href="https://telegram.dog/CinemasMawa"> <img src="https://img.shields.io/badge/Updates- Channel -blueviolet?style=for-the-badge" alt="Channel"> </a> 
+        </b></h3></center>
+    </div>
+</div>
 </div>
     <footer>
       <p style="font-size: 15px; color:#7b89a3;padding-top: 20px ;margin:0px 10px; border-top: 1px solid #c2cee3;">
@@ -166,143 +109,3 @@
     </footer>
     
     
-    <script src="https://cdn.plyr.io/3.6.12/plyr.js"></script>
-	<script>
-        const controls = [
-              'play-large',
-              'rewind',
-              'play', 
-              'fast-forward', 
-              'progress', 
-              'current-time',
-              'duration',
-              'mute',
-              'volume',
-              'captions',
-              'settings',
-              'pip',
-              'airplay',
-              'download',
-              'fullscreen'
-            ];
-	</script>
-	<div>
-		<script>
-    const currentUrl = window.location.href;
-    const finalUrl = currentUrl.replace("/watch/", "/");
-
-    function playOnline() {
-        const finalLinkUrl = finalUrl;
-        const vlcUrl = `vlc://${finalLinkUrl}`;
-        window.location.href = vlcUrl;
-    }
-
-    function playOnlineMx() {
-        const finalLinkUrl = finalUrl;
-        const mxUrl = `intent:${finalLinkUrl}#Intent;package=com.mxtech.videoplayer.ad;end`;
-        window.location.href = mxUrl;
-    }
-    
-    function playOnlinesp() {
-        const finalLinkUrl = finalUrl;
-        const spUrl = `intent:${finalLinkUrl}#Intent;action=com.young.simple.player.playback_online;package=com.young.simple.player;end`;
-        window.location.href = spUrl;
-    }
-    
-    function playOnlinepi() {
-        const finalLinkUrl = finalUrl;
-        const piUrl = `playit://playerv2/video?url=${finalLinkUrl}&amp;title={{file_name}}`;
-        window.location.href = piUrl;
-    }
-			
-    function download() {
-        const finalLinkUrl = finalUrl;
-        window.location.href = finalLinkUrl;
-    }
-
-    function openTgBot() {
-        const createLinkUrl = "https://telegram.dog/";
-        window.open(createLinkUrl, "_blank");
-    }
-
-    function openModalTG() {
-        const modal = document.getElementById("myModal");
-        modal.style.display = "block";
-
-        const words = [
-            "Received File request...✅",
-            "Processing your request...⌛",
-            "Generating your link...🔗",
-            "Sending link to you...🚀",
-            "Redirecting To Telegram...😉"
-        ];
-
-        let index = 0;
-        const timerElement = document.getElementById("timer");
-        timerElement.innerText = words[index];
-
-        const timer = setInterval(() => {
-            index++;
-            if (index < words.length) {
-                timerElement.innerText = words[index];
-            } else {
-                clearInterval(timer);
-                TGre();
-                modal.style.display = "none";
-            }
-        }, 1000);
-    }
-
-    function TGre() {
-        const tglink = "";
-        window.location.href = tglink;
-    }
-
-    function openModal() {
-        const modal = document.getElementById("myModal");
-        modal.style.display = "block";
-
-        const words = [
-            "Received Download request...✅",
-            "Processing your request...⌛",
-            "Generating your link...🔗",
-            "Sending link to you...🚀",
-            "Download has started...😉"
-        ];
-
-        let index = 0;
-        const timerElement = document.getElementById("timer");
-        timerElement.innerText = words[index];
-
-        const timer = setInterval(() => {
-            index++;
-            if (index < words.length) {
-                timerElement.innerText = words[index];
-            } else {
-                clearInterval(timer);
-                download();
-                modal.style.display = "none";
-            }
-        }, 1000);
-    }
-
-    function download() {
-        const finalLinkUrl = finalUrl;
-        window.location.href = finalLinkUrl;
-    }
-	
-        document.addEventListener('DOMContentLoaded', () => {
-            const player = Plyr.setup('.player', { controls });
-        });
-
-        const body = document.querySelector('body');
-        const footer = document.querySelector('footer');
-        const toogle = document.querySelector('.toogle');
-        toogle.onclick = () => {
-            body.classList.toggle('dark')
-            footer.classList.toggle('dark')
-        }
-    </script>
-	</div>
-</body>
-</html>
